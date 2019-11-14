@@ -9,12 +9,15 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+ 
+  userProfile: any;
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
       domain: "dev-o4u3snvo.auth0.com",
       client_id: "fFV6CXLQSYRDPHx2p15zQd3gL21vhVQC",
-      redirect_uri: 'http://localhost:4200/callback'
+      redirect_uri: 'http://localhost:4200/callback',
+      scope: "openid profile"
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
@@ -111,8 +114,8 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
-        client_id: "YOUR_CLIENT_ID",
-        returnTo: 'http://localhost:4200/callback'
+        client_id: "fFV6CXLQSYRDPHx2p15zQd3gL21vhVQC",
+        returnTo: 'http://localhost:4200/'
       });
     });
   }

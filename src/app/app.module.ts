@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { PrivateComponent } from './components/private/private.component';
 import { AuthService } from './services/auth.service';
+import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    PrivateComponent
+    PrivateComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
