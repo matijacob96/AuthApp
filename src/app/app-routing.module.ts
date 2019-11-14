@@ -5,6 +5,7 @@ import { AboutComponent } from "./components/about/about.component";
 import { PrivateComponent } from "./components/private/private.component";
 import { AuthGuard } from './services/auth.guard';
 import { CallbackComponent } from './components/callback/callback.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const ROUTES: Routes = [
   { path: "", component: HomeComponent },
@@ -12,6 +13,7 @@ const ROUTES: Routes = [
   { path: "about", component: AboutComponent },
   { path: "private", component: PrivateComponent, canActivate: [AuthGuard] },
   { path: "callback", component: CallbackComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: "**", component: HomeComponent }
 ];
 

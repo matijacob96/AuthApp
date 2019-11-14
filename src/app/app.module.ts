@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PrivateComponent } from './components/private/private.component';
 import { AuthService } from './services/auth.service';
 import { CallbackComponent } from './components/callback/callback.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CallbackComponent } from './components/callback/callback.component';
     HomeComponent,
     AboutComponent,
     PrivateComponent,
-    CallbackComponent
+    CallbackComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
