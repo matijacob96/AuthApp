@@ -13,7 +13,7 @@ const ROUTES: Routes = [
   { path: "about", component: AboutComponent },
   { path: "private", component: PrivateComponent, canActivate: [AuthGuard] },
   { path: "callback", component: CallbackComponent},
-  { path: 'profile', component: ProfileComponent},
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: "**", component: HomeComponent }
 ];
 
